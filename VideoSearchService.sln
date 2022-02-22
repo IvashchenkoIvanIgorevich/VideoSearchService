@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VideoSearchService.Service"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VideoSearchService.Test", "VideoSearchService.Test\VideoSearchService.Test.csproj", "{9C03AB1A-BFBD-4C37-8415-AA697FDEBF5D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VideoSearchService.UI", "VideoSearchService.UI\VideoSearchService.UI.csproj", "{8D84D302-E1DA-4A88-B565-D37C40C2CB10}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{9C03AB1A-BFBD-4C37-8415-AA697FDEBF5D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9C03AB1A-BFBD-4C37-8415-AA697FDEBF5D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9C03AB1A-BFBD-4C37-8415-AA697FDEBF5D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8D84D302-E1DA-4A88-B565-D37C40C2CB10}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D84D302-E1DA-4A88-B565-D37C40C2CB10}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D84D302-E1DA-4A88-B565-D37C40C2CB10}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D84D302-E1DA-4A88-B565-D37C40C2CB10}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
