@@ -2,7 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
-using VideoSearchService.Data;
+using VideoSearchService.Data.Models;
 
 namespace VideoSearchService.DAL
 {

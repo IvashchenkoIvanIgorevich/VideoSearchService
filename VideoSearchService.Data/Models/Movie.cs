@@ -2,7 +2,7 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace VideoSearchService.Data
+namespace VideoSearchService.Data.Models
 {
     public class Movie
     {

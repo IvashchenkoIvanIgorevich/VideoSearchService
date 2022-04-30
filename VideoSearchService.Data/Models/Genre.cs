@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Text;
 
-namespace VideoSearchService.Data
+namespace VideoSearchService.Data.Models
 {
     public class Genre
     {
