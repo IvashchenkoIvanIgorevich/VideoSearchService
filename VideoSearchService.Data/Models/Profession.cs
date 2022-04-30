@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
-namespace VideoSearchService.Data
+namespace VideoSearchService.Data.Models
 {
     public class Profession
     {
