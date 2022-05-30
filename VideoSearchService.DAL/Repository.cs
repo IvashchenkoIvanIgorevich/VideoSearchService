@@ -1,8 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Linq.Expressions;
 using System.Threading.Tasks;
 using VideoSearchService.Data.Interfaces;
 
@@ -11,55 +8,36 @@ namespace VideoSearchService.DAL
     public abstract class Repository<TEntity> : IRepository<TEntity> where TEntity : class
     {
         private ApplicationDbContext _context;
-        private DbSet<TEntity> _dbSet;
+        private DbSet<TEntity> _entities;
 
         public Repository(ApplicationDbContext context)
         {
-            _context = context;
-            _dbSet = context.Set<TEntity>();
+            _context = context;            
         }
 
-        public virtual async Task<IEnumerable<TEntity>> GetAll(
-            Expression<Func<TEntity, bool>> filter = null,
-            Func<IQueryable<TEntity>, IOrderedQueryable<TEntity>> orderBy = null,
-            string includeProperties = "")
+        protected virtual DbSet<TEntity> Entities
         {
-            IQueryable<TEntity> query = _dbSet;
+            get
+            {
+                if (_entities == null)
+                    _entities = _context.Set<TEntity>();
 
-            if (filter != null)
-            {
-                query = query.Where(filter);
-            }
-
-            foreach (var includeProperty in includeProperties.Split
-                (new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries))
-            {
-                query = query.Include(includeProperty);
-            }
-
-            if (orderBy != null)
-            {
-                return await orderBy(query).ToListAsync();
-            }
-            else
-            {
-                return await query.ToListAsync();
+                return _entities;
             }
         }
 
-        public virtual async Task<TEntity> Get(object id)
-        {
-            return await _dbSet.FindAsync(id);
-        }
+        public virtual async Task<IEnumerable<TEntity>> GetAllAsync() =>
+            await _entities.ToListAsync();
 
-        public virtual async Task Add(TEntity entity)
-        {
-            await _dbSet.AddAsync(entity);
-        }
+        public virtual async Task<TEntity> GetAsync(int id) => 
+            await _entities.FindAsync(id);
+        
+        public virtual async Task AddAsync(TEntity entity) =>
+            await _entities.AddAsync(entity);
 
-        public virtual void Delete(object id)
+        public virtual async void Delete(int id)
         {
-            TEntity entityToDelete = _dbSet.Find(id);
+            TEntity entityToDelete = await _entities.FindAsync(id);
             Delete(entityToDelete);
         }
 
@@ -67,14 +45,20 @@ namespace VideoSearchService.DAL
         {
             if (_context.Entry(entityToDelete).State == EntityState.Detached)
             {
-                _dbSet.Attach(entityToDelete);
+                _entities.Attach(entityToDelete);
             }
-            _dbSet.Remove(entityToDelete);
+            _entities.Remove(entityToDelete);
+        }
+
+        public virtual void Delete(IEnumerable<TEntity> entities)
+        {
+            foreach (var entity in entities)
+                Delete(entity);
         }
 
         public virtual void Update(TEntity entityToUpdate)
         {
-            _dbSet.Attach(entityToUpdate);
+            _entities.Attach(entityToUpdate);
             _context.Entry(entityToUpdate).State = EntityState.Modified;
         }
     }

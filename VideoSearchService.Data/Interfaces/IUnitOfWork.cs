@@ -11,6 +11,6 @@ namespace VideoSearchService.Data.Interfaces
         IGenreRepository Genres { get; }
         IProfessionRepository Professions { get; }
         IRatingRepository Ratings { get; }
-        int Save();
+        int Commit();
     }
 }

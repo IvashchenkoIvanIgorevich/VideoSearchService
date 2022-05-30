@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 using VideoSearchService.Data.Interfaces;
 
 namespace VideoSearchService.DAL
@@ -28,7 +26,7 @@ namespace VideoSearchService.DAL
             Ratings = ratingRepository;
         }
 
-        public int Save()
+        public int Commit()
         {
             return _context.SaveChanges();
         }
