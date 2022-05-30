@@ -3,15 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31910.168
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VideoSearchService.API", "VideoSearchService.API\VideoSearchService.API.csproj", "{DDE164C6-0EC4-4BE7-954C-194BF4F71B48}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VideoSearchService.DAL", "VideoSearchService.DAL\VideoSearchService.DAL.csproj", "{8288F5FD-7862-4813-9A04-C2155ADF7CC5}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VideoSearchService.Service", "VideoSearchService.Service\VideoSearchService.Service.csproj", "{7D6FD96B-38BE-4189-9089-55280D319D2B}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VideoSearchService.Test", "VideoSearchService.Test\VideoSearchService.Test.csproj", "{9C03AB1A-BFBD-4C37-8415-AA697FDEBF5D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VideoSearchService.UI", "VideoSearchService.UI\VideoSearchService.UI.csproj", "{0F453BD0-F308-453D-8354-23C571EB7478}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VideoSearchService.ClientApp", "VideoSearchService.ClientApp\VideoSearchService.ClientApp.csproj", "{1FF9C933-D4A5-4F6C-AAC3-DFECACE77760}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VideoSearchService.Data", "VideoSearchService.Data\VideoSearchService.Data.csproj", "{A92C746F-D48C-48BF-8374-76223BA33BBA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,10 +19,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{DDE164C6-0EC4-4BE7-954C-194BF4F71B48}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{DDE164C6-0EC4-4BE7-954C-194BF4F71B48}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{DDE164C6-0EC4-4BE7-954C-194BF4F71B48}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{DDE164C6-0EC4-4BE7-954C-194BF4F71B48}.Release|Any CPU.Build.0 = Release|Any CPU
 		{8288F5FD-7862-4813-9A04-C2155ADF7CC5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{8288F5FD-7862-4813-9A04-C2155ADF7CC5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8288F5FD-7862-4813-9A04-C2155ADF7CC5}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -35,10 +31,14 @@ Global
 		{9C03AB1A-BFBD-4C37-8415-AA697FDEBF5D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9C03AB1A-BFBD-4C37-8415-AA697FDEBF5D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9C03AB1A-BFBD-4C37-8415-AA697FDEBF5D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{0F453BD0-F308-453D-8354-23C571EB7478}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0F453BD0-F308-453D-8354-23C571EB7478}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0F453BD0-F308-453D-8354-23C571EB7478}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0F453BD0-F308-453D-8354-23C571EB7478}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1FF9C933-D4A5-4F6C-AAC3-DFECACE77760}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1FF9C933-D4A5-4F6C-AAC3-DFECACE77760}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1FF9C933-D4A5-4F6C-AAC3-DFECACE77760}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1FF9C933-D4A5-4F6C-AAC3-DFECACE77760}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A92C746F-D48C-48BF-8374-76223BA33BBA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A92C746F-D48C-48BF-8374-76223BA33BBA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A92C746F-D48C-48BF-8374-76223BA33BBA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A92C746F-D48C-48BF-8374-76223BA33BBA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
