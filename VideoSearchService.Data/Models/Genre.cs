@@ -8,6 +8,6 @@ namespace VideoSearchService.Data.Models
         public int Id { get; set; }
         [MaxLength(20)]
         public string Name { get; set; }
-        public IEnumerable<Movie> Movies { get; set; }
+        public IEnumerable<MovieGenre> MovieGenres { get; set; }
     }
 }

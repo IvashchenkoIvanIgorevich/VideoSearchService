@@ -12,7 +12,7 @@ namespace VideoSearchService.Data.Models
         public string LastName { get; set; }
         [MaxLength(300)]
         public string? Description { get; set; }
-        public IEnumerable<Profession> Professions { get; set; }
-        public IEnumerable<Movie> Movies { get; set; }
+        public IEnumerable<ActorProfession> ActorProfessions { get; set; }
+        public IEnumerable<MovieActor> MovieActors { get; set; }
     }
 }

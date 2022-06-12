@@ -15,9 +15,9 @@ namespace VideoSearchService.Data.Models
         public string Year { get; set; }        
         public short Duration { get; set; }
         public byte AgeLimit { get; set; }
-        public IEnumerable<Actor> Actors { get; set; }
+        public IEnumerable<MovieActor> MovieActors { get; set; }
         public IEnumerable<Rating> Ratings { get; set; }
-        public IEnumerable<Genre> Genres { get; set; }
+        public IEnumerable<MovieGenre> MovieGenres { get; set; }
         [NotMapped]
         public IEnumerable<Actor> Directors { get; set; }
         [NotMapped]
