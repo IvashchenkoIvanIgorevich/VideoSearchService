@@ -134,7 +134,7 @@ namespace VideoSearchService.DAL
                     LastName = "Downey Jr.", 
                     Description = "Robert John Downey Jr. is an American actor and producer. His career has been " +
                     "characterized by critical and popular success in his youth, followed by a period of substance " +
-                    "abuse and legal troubles, before a resurgence of commercial success later in his career." 
+                    "abuse and legal troubles, before a resurgence of commercial success later in his career."
                 },
                 new Actor 
                 { 
@@ -194,7 +194,13 @@ namespace VideoSearchService.DAL
                 new Genre { Id = 1, Name = "Adventure" },
                 new Genre { Id = 2, Name = "Action movie" },
                 new Genre { Id = 3, Name = "Thriller" },
-                new Genre { Id = 4, Name = "Comedy" }
+                new Genre { Id = 4, Name = "Comedy" },
+                new Genre { Id = 5, Name = "Fantastic" },
+                new Genre { Id = 6, Name = "Fantasy" },
+                new Genre { Id = 7, Name = "Detective" },
+                new Genre { Id = 8, Name = "Family" },
+                new Genre { Id = 9, Name = "Horror" },
+                new Genre { Id = 10, Name = "Drama" }
             };
 
             List<Rating> ratings = new List<Rating> 
@@ -209,18 +215,102 @@ namespace VideoSearchService.DAL
                 new Rating { Id = 8, Name = "IMDB", Mark = 9.1, MovieId = 4 },
                 new Rating { Id = 9, Name = "IMDB", Mark = 8.2, MovieId = 5 },
                 new Rating { Id = 10, Name = "IMDB", Mark = 5.6, MovieId = 6 },
-                new Rating { Id = 10, Name = "Metacritic", Mark = 4.3, MovieId = 9 },
-                new Rating { Id = 10, Name = "MGG", Mark = 9.6, MovieId = 10 },
-                new Rating { Id = 10, Name = "Metacritic", Mark = 6.8, MovieId = 11 },
-                new Rating { Id = 10, Name = "Netflix", Mark = 8.1, MovieId = 9 },
-                new Rating { Id = 10, Name = "IMDB", Mark = 4.5, MovieId = 7 },
-                new Rating { Id = 10, Name = "Metacritic", Mark = 5.2, MovieId = 10 },
-                new Rating { Id = 10, Name = "IMDB", Mark = 8.2, MovieId = 8 },
-                new Rating { Id = 10, Name = "MGG", Mark = 7.5, MovieId = 3 },
+                new Rating { Id = 11, Name = "Metacritic", Mark = 4.3, MovieId = 9 },
+                new Rating { Id = 12, Name = "MGG", Mark = 9.6, MovieId = 10 },
+                new Rating { Id = 13, Name = "Metacritic", Mark = 6.8, MovieId = 11 },
+                new Rating { Id = 14, Name = "Netflix", Mark = 8.1, MovieId = 9 },
+                new Rating { Id = 15, Name = "IMDB", Mark = 4.5, MovieId = 7 },
+                new Rating { Id = 16, Name = "Metacritic", Mark = 5.2, MovieId = 10 },
+                new Rating { Id = 17, Name = "IMDB", Mark = 8.2, MovieId = 8 },
+                new Rating { Id = 18, Name = "MGG", Mark = 7.5, MovieId = 3 },
             };
 
+            List<ActorProfession> actorProfessions = new List<ActorProfession>
+            {
+                new ActorProfession { ActorId = 1, ProfessionId = 1 },
+                new ActorProfession { ActorId = 1, ProfessionId = 2 },
+                new ActorProfession { ActorId = 1, ProfessionId = 4 },
+                new ActorProfession { ActorId = 2, ProfessionId = 1 },
+                new ActorProfession { ActorId = 3, ProfessionId = 1 },
+                new ActorProfession { ActorId = 3, ProfessionId = 2 },
+                new ActorProfession { ActorId = 3, ProfessionId = 3 },
+                new ActorProfession { ActorId = 3, ProfessionId = 4 },
+                new ActorProfession { ActorId = 4, ProfessionId = 1 },
+                new ActorProfession { ActorId = 4, ProfessionId = 2 },
+                new ActorProfession { ActorId = 4, ProfessionId = 3 },
+                new ActorProfession { ActorId = 5, ProfessionId = 1 },
+                new ActorProfession { ActorId = 6, ProfessionId = 1 },
+                new ActorProfession { ActorId = 6, ProfessionId = 3 },
+            };
 
+            List<MovieGenre> movieGenres = new List<MovieGenre>
+            {
+                new MovieGenre { MovieId = 1, GenreId = 1 },
+                new MovieGenre { MovieId = 1, GenreId = 2 },
+                new MovieGenre { MovieId = 1, GenreId = 4 },
+                new MovieGenre { MovieId = 1, GenreId = 5 },
+                new MovieGenre { MovieId = 1, GenreId = 6 },
+                new MovieGenre { MovieId = 2, GenreId = 2 },
+                new MovieGenre { MovieId = 2, GenreId = 5 },
+                new MovieGenre { MovieId = 3, GenreId = 1 },
+                new MovieGenre { MovieId = 3, GenreId = 2 },
+                new MovieGenre { MovieId = 3, GenreId = 5 },
+                new MovieGenre { MovieId = 4, GenreId = 1 },
+                new MovieGenre { MovieId = 4, GenreId = 2 },
+                new MovieGenre { MovieId = 5, GenreId = 2 },
+                new MovieGenre { MovieId = 5, GenreId = 5 },
+                new MovieGenre { MovieId = 6, GenreId = 3 },
+                new MovieGenre { MovieId = 6, GenreId = 7 },
+                new MovieGenre { MovieId = 7, GenreId = 4 },
+                new MovieGenre { MovieId = 7, GenreId = 6 },
+                new MovieGenre { MovieId = 7, GenreId = 8 },
+                new MovieGenre { MovieId = 8, GenreId = 1 },
+                new MovieGenre { MovieId = 8, GenreId = 2 },
+                new MovieGenre { MovieId = 8, GenreId = 5 },
+                new MovieGenre { MovieId = 8, GenreId = 6 },
+                new MovieGenre { MovieId = 8, GenreId = 9 },
+                new MovieGenre { MovieId = 9, GenreId = 3 },
+                new MovieGenre { MovieId = 9, GenreId = 10 },
+                new MovieGenre { MovieId = 10, GenreId = 1 },
+                new MovieGenre { MovieId = 10, GenreId = 6 },
+                new MovieGenre { MovieId = 11, GenreId = 2 },
+                new MovieGenre { MovieId = 11, GenreId = 5 },
+                new MovieGenre { MovieId = 11, GenreId = 10 }
+            };
+
+            List<MovieActor> movieActors = new List<MovieActor>
+            {
+                new MovieActor { MovieId = 1, ActorId = 2 },
+                new MovieActor { MovieId = 1, ActorId = 3 },
+                new MovieActor { MovieId = 1, ActorId = 5 },
+                new MovieActor { MovieId = 2, ActorId = 1 },
+                new MovieActor { MovieId = 2, ActorId = 2 },
+                new MovieActor { MovieId = 2, ActorId = 3 },
+                new MovieActor { MovieId = 2, ActorId = 4 },
+                new MovieActor { MovieId = 2, ActorId = 5 },
+                new MovieActor { MovieId = 3, ActorId = 5 },
+                new MovieActor { MovieId = 3, ActorId = 6 },
+                new MovieActor { MovieId = 4, ActorId = 6 },
+                new MovieActor { MovieId = 5, ActorId = 1 },
+                new MovieActor { MovieId = 5, ActorId = 4 },
+                new MovieActor { MovieId = 5, ActorId = 6 },
+                new MovieActor { MovieId = 6, ActorId = 1 },
+                new MovieActor { MovieId = 7, ActorId = 1 },
+                new MovieActor { MovieId = 8, ActorId = 5 },
+                new MovieActor { MovieId = 8, ActorId = 6 },
+                new MovieActor { MovieId = 9, ActorId = 5 },
+                new MovieActor { MovieId = 10, ActorId = 5 },
+                new MovieActor { MovieId = 11, ActorId = 4 },
+            };
+
+            modelBuilder.Entity<Actor>().HasData(actors);
+            modelBuilder.Entity<Genre>().HasData(genres);
+            modelBuilder.Entity<Movie>().HasData(movies);
             modelBuilder.Entity<Profession>().HasData(professions);
+            modelBuilder.Entity<Rating>().HasData(ratings);
+            modelBuilder.Entity<ActorProfession>().HasData(actorProfessions);
+            modelBuilder.Entity<MovieGenre>().HasData(movieGenres);
+            modelBuilder.Entity<MovieActor>().HasData(movieActors);
         }
     }
 }

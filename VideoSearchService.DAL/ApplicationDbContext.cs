@@ -25,34 +25,34 @@ namespace VideoSearchService.DAL
                 .HasKey(ap => new { ap.ActorId, ap.ProfessionId });
             modelBuilder.Entity<ActorProfession>()
                 .HasOne(ap => ap.Actor)
-                .WithMany(p => p.ActorProfessions)
-                .HasForeignKey(p => p.ProfessionId);
+                .WithMany(a => a.ActorProfessions)
+                .HasForeignKey(ap => ap.ActorId);
             modelBuilder.Entity<ActorProfession>()
                 .HasOne(ap => ap.Profession)
                 .WithMany(p => p.ActorProfessions)
-                .HasForeignKey(p => p.ActorId);
+                .HasForeignKey(ap => ap.ProfessionId);
 
             modelBuilder.Entity<MovieGenre>()
                 .HasKey(mg => new { mg.MovieId, mg.GenreId});
             modelBuilder.Entity<MovieGenre>()
                 .HasOne(mg => mg.Movie)
                 .WithMany(m => m.MovieGenres)
-                .HasForeignKey(g => g.GenreId);
+                .HasForeignKey(mg => mg.MovieId);
             modelBuilder.Entity<MovieGenre>()
                 .HasOne(mg => mg.Genre)
-                .WithMany(m => m.MovieGenres)
-                .HasForeignKey(g => g.MovieId);
+                .WithMany(g => g.MovieGenres)
+                .HasForeignKey(mg => mg.GenreId);
 
             modelBuilder.Entity<MovieActor>()
                 .HasKey(ma => new { ma.MovieId, ma.ActorId });
             modelBuilder.Entity<MovieActor>()
                 .HasOne(ma => ma.Actor)
-                .WithMany(m => m.MovieActors)
-                .HasForeignKey(a => a.MovieId);
+                .WithMany(a => a.MovieActors)
+                .HasForeignKey(ma => ma.ActorId);
             modelBuilder.Entity<MovieActor>()
                 .HasOne(ma => ma.Movie)
                 .WithMany(m => m.MovieActors)
-                .HasForeignKey(a => a.ActorId);
+                .HasForeignKey(ma => ma.MovieId);
 
             modelBuilder.Seed();
         }
