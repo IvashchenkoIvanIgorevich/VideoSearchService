@@ -23,7 +23,7 @@ namespace VideoSearchService.DAL
             Actors = actorRepository;
             Professions = professionRepository;
             Genres = genreRepository;
-            Ratings = ratingRepository;
+            Ratings = ratingRepository;;
         }
 
         public int Commit()

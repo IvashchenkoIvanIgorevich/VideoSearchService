@@ -24,9 +24,12 @@ namespace VideoSearchService.ClientApp.Controllers
                 return BadRequest(new { errorText = "The search form doesn't fill" });
             }
 
-            var movies = await _searchService.FetchFilmDataAsync(searchInformation);
+            var movies = await _searchService.FetchMoviesByDescriptionAsync(searchInformation);
 
-            return View(movies);
+            if (movies == null || movies.Count() == 0) 
+                return BadRequest(new { errorText = "Sorry, searching did not get any results" });
+
+            return Ok(movies);
         }
     }
 }

@@ -1,5 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Linq.Expressions;
 using System.Threading.Tasks;
 using VideoSearchService.Data.Interfaces;
 
@@ -12,7 +15,8 @@ namespace VideoSearchService.DAL
 
         public Repository(ApplicationDbContext context)
         {
-            _context = context;            
+            _context = context;
+            _entities = Entities;
         }
 
         protected virtual DbSet<TEntity> Entities
@@ -61,5 +65,17 @@ namespace VideoSearchService.DAL
             _entities.Attach(entityToUpdate);
             _context.Entry(entityToUpdate).State = EntityState.Modified;
         }
+
+        //public IEnumerable<TEntity> GetWithInclude(params Expression<Func<TEntity, object>>[] includeProperties)
+        //{
+        //    return Include(includeProperties).ToList();
+        //}
+
+        //private IQueryable<TEntity> Include(params Expression<Func<TEntity, object>>[] includeProperties)
+        //{
+        //    IQueryable<TEntity> query = _entities.AsNoTracking();
+        //    return includeProperties
+        //        .Aggregate(query, (current, includeProperty) => current.Include(includeProperty));
+        //}
     }
 }

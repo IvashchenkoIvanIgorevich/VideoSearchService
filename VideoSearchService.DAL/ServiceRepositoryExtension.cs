@@ -11,7 +11,7 @@ namespace VideoSearchService.DAL
             services.AddTransient<IActorRepository, ActorRepository>();
             services.AddTransient<IGenreRepository, GenreRepository>();
             services.AddTransient<IProfessionRepository, ProfessionRepository>();
-            services.AddTransient<IRatingRepository, RatingRepository>();
+            services.AddTransient<IRatingRepository, RatingRepository>();            
             services.AddTransient<IUnitOfWork, UnitOfWork>();
             
             return services;

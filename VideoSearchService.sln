@@ -11,7 +11,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VideoSearchService.Test", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VideoSearchService.ClientApp", "VideoSearchService.ClientApp\VideoSearchService.ClientApp.csproj", "{1FF9C933-D4A5-4F6C-AAC3-DFECACE77760}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VideoSearchService.Data", "VideoSearchService.Data\VideoSearchService.Data.csproj", "{A92C746F-D48C-48BF-8374-76223BA33BBA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VideoSearchService.Data", "VideoSearchService.Data\VideoSearchService.Data.csproj", "{A92C746F-D48C-48BF-8374-76223BA33BBA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VideoSearchService.Common", "Common\VideoSearchService.Common.csproj", "{EE2D8FB9-71D6-45C4-B1F0-85CD3EBA3597}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{A92C746F-D48C-48BF-8374-76223BA33BBA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A92C746F-D48C-48BF-8374-76223BA33BBA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A92C746F-D48C-48BF-8374-76223BA33BBA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EE2D8FB9-71D6-45C4-B1F0-85CD3EBA3597}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE2D8FB9-71D6-45C4-B1F0-85CD3EBA3597}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE2D8FB9-71D6-45C4-B1F0-85CD3EBA3597}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE2D8FB9-71D6-45C4-B1F0-85CD3EBA3597}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

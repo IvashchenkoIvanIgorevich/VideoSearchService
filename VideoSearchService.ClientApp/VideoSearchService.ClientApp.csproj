@@ -22,6 +22,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\VideoSearchService.DAL\VideoSearchService.DAL.csproj" />
+    <ProjectReference Include="..\VideoSearchService.Service\VideoSearchService.Service.csproj" />
   </ItemGroup>
 
   <ItemGroup>

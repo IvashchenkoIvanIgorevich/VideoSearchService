@@ -6,12 +6,13 @@
 
   <ItemGroup>
     <PackageReference Include="IdentityModel" Version="6.0.0" />
-    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="5.0.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="5.0.2" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\VideoSearchService.Data\VideoSearchService.Data.csproj" />
+    <ProjectReference Include="..\Common\VideoSearchService.Common.csproj" />
+    <ProjectReference Include="..\VideoSearchService.DAL\VideoSearchService.DAL.csproj" />
   </ItemGroup>
 
 </Project>
